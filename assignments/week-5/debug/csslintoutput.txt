@@ -1,0 +1,12 @@
+
+small.css
+  63:1  ×  Expected selector ".menu li" to come before selector ".menu li:first-child"         no-descending-specificity
+  68:1  ×  Expected selector ".burger li" to come before selector ".menu li:first-child"       no-descending-specificity
+  71:1  ×  Unexpected duplicate selector "nav", first used at line 35                          no-duplicate-selectors   
+ 142:1  ×  Expected selector ".join-now a" to come before selector "nav a:hover"               no-descending-specificity
+ 177:1  ×  Expected selector ".view-changer img" to come before selector ".socialIcon a img"   no-descending-specificity
+ 180:1  ×  Expected selector ".cards img" to come before selector ".socialIcon a img"          no-descending-specificity
+ 249:1  ×  Expected selector "legend h2" to come before selector ".cards section h2"           no-descending-specificity
+ 293:1  ×  Expected selector ".thanks h2" to come before selector ".cards section h2"          no-descending-specificity
+ 297:1  ×  Expected selector ".members li" to come before selector ".menu li:first-child"      no-descending-specificity
+
