@@ -579,6 +579,21 @@ footer a {
     box-shadow: -10px -10px 20px #ff4365, 10px 10px 20px #ff4365;
   }
 }
+@keyframes gradient-animated-thin {
+  0% {
+    border: 2px solid #662c91;
+    box-shadow: -5px -5px 20px #00d9c0, 5px 5px 20px #00d9c0;
+    opacity: 0.5;
+  }
+  50% {
+    border: 2px solid #ff4365;
+    box-shadow: -5px -5px 20px #662c91, 5px 5px 20px #662c91;
+  }
+  100% {
+    border: 2px solid #00d9c0;
+    box-shadow: -5px -5px 20px #ff4365, 5px 5px 20px #ff4365;
+  }
+}
 .zen-validate-html::before {
   display: inline-block;
   position: relative;
@@ -680,7 +695,7 @@ header {
     text-align: center;
     display: grid;
     height: 15vh;
-    animation: gradient-animated 4s alternate linear infinite;
+    animation: gradient-animated-thin 4s alternate linear infinite;
   }
 
   .design-selection a, .design-selection #text {
