@@ -579,95 +579,70 @@ aside .wrapper div h3 {
 }
 
 footer {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  align-content: space-between;
-  justify-content: space-between;
-  max-width: 90%;
-  margin-left: 5%;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  border: 1px solid #662c91;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
   text-align: center;
-  animation: gradient-animated 4s alternate linear infinite;
-}
-
-footer a {
-  display: flex;
-  color: rgba(255, 255, 255, 0);
-}
-
-.zen-validate-html::before {
-  display: inline-block;
-  position: relative;
-  content: "";
-  width: 50px;
-  height: 80px;
-  background: url("https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.6;
-}
-
-.zen-validate-css::after {
-  display: inline-block;
-  position: relative;
-  content: "";
-  width: 50px;
-  height: 80px;
-  background: url("https://www.pngkey.com/png/full/141-1415612_css-css3-logo-black-and-white.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.6;
-}
-
-.zen-license::after {
-  display: inline-block;
-  position: relative;
-  content: "";
-  width: 50px;
-  height: 80px;
-  background: url("https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.6;
-}
-
-.zen-accessibility::after {
-  display: inline-block;
-  position: relative;
-  content: "";
-  width: 50px;
-  height: 80px;
-  background: url("https://www.jimpeplinski.ca/wp-content/uploads/2017/02/Accessibility_Icon_final.gif");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.6;
-}
-
-.zen-github::after {
-  display: inline-block;
-  position: relative;
-  content: "";
-  width: 50px;
-  height: 80px;
-  background: url("https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/142_Github-512.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.6;
-}
-
-.intro {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  align-content: space-between;
-  height: 100%;
-}
-
-header {
-  flex: 0 0 100%;
+  animation: gradient-animated-thin 4s alternate linear infinite;
 }
 
 @media only screen and (min-width: 1024px) {
+  footer {
+    font-size: 1.2rem;
+  }
+
+  /*footer {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      align-content: space-between;
+      justify-content: space-between;
+      max-width: 90%;
+      margin-left: 5%;
+      text-align: center;
+      animation: gradient-animated 4s alternate linear infinite;
+  }
+
+  footer a {
+      display: flex;
+      color: rgba(255, 255, 255, 0.0)
+  }
+  .zen-validate-html::before {
+      @include footer-icon('https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png')
+  }
+
+  .zen-validate-css::after {
+      @include footer-icon('https://www.pngkey.com/png/full/141-1415612_css-css3-logo-black-and-white.png')
+  }
+
+  .zen-license::after {
+      @include footer-icon('https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png')
+  }
+
+  .zen-accessibility::after {
+      @include footer-icon('https://www.jimpeplinski.ca/wp-content/uploads/2017/02/Accessibility_Icon_final.gif')
+  }
+
+  .zen-github::after {
+      @include footer-icon('https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/142_Github-512.png')
+  }
+  */
+  .intro {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    height: 100%;
+  }
+
+  header {
+    flex: 0 0 100%;
+  }
+
   .summary, .preamble {
     width: 60%;
     margin: 0 auto;

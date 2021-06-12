@@ -76,3 +76,15 @@ aside {
 		}
 	}
 }
+
+footer {
+    font-size: .8rem;
+	margin: 0 1rem;
+	padding: 1rem;
+	border: 1px solid $color-1;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	text-align: center;
+    animation: gradient-animated-thin 4s alternate linear infinite;
+}
