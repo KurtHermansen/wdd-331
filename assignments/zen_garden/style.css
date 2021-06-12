@@ -54,6 +54,36 @@ table {
   border-spacing: 0;
 }
 
+@keyframes gradient-animated {
+  0% {
+    border: 5px solid #662c91;
+    box-shadow: -10px -10px 20px #00d9c0, 10px 10px 20px #00d9c0;
+    opacity: 0.5;
+  }
+  50% {
+    border: 5px solid #ff4365;
+    box-shadow: -10px -10px 20px #662c91, 10px 10px 20px #662c91;
+  }
+  100% {
+    border: 5px solid #00d9c0;
+    box-shadow: -10px -10px 20px #ff4365, 10px 10px 20px #ff4365;
+  }
+}
+@keyframes gradient-animated-thin {
+  0% {
+    border: 2px solid #662c91;
+    box-shadow: -5px -5px 20px #00d9c0, 5px 5px 20px #00d9c0;
+    opacity: 0.5;
+  }
+  50% {
+    border: 2px solid #ff4365;
+    box-shadow: -5px -5px 20px #662c91, 5px 5px 20px #662c91;
+  }
+  100% {
+    border: 2px solid #00d9c0;
+    box-shadow: -5px -5px 20px #ff4365, 5px 5px 20px #ff4365;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .sidebar {
     text-align: center;
@@ -561,39 +591,10 @@ footer {
 }
 
 footer a {
-  align-items: center;
+  display: flex;
+  color: rgba(255, 255, 255, 0);
 }
 
-@keyframes gradient-animated {
-  0% {
-    border: 5px solid #662c91;
-    box-shadow: -10px -10px 20px #00d9c0, 10px 10px 20px #00d9c0;
-    opacity: 0.5;
-  }
-  50% {
-    border: 5px solid #ff4365;
-    box-shadow: -10px -10px 20px #662c91, 10px 10px 20px #662c91;
-  }
-  100% {
-    border: 5px solid #00d9c0;
-    box-shadow: -10px -10px 20px #ff4365, 10px 10px 20px #ff4365;
-  }
-}
-@keyframes gradient-animated-thin {
-  0% {
-    border: 2px solid #662c91;
-    box-shadow: -5px -5px 20px #00d9c0, 5px 5px 20px #00d9c0;
-    opacity: 0.5;
-  }
-  50% {
-    border: 2px solid #ff4365;
-    box-shadow: -5px -5px 20px #662c91, 5px 5px 20px #662c91;
-  }
-  100% {
-    border: 2px solid #00d9c0;
-    box-shadow: -5px -5px 20px #ff4365, 5px 5px 20px #ff4365;
-  }
-}
 .zen-validate-html::before {
   display: inline-block;
   position: relative;
