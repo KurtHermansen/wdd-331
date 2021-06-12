@@ -1,5 +1,5 @@
 
-small.css
+stylesheet.css
   63:1  ×  Expected selector ".menu li" to come before selector ".menu li:first-child"         no-descending-specificity
   68:1  ×  Expected selector ".burger li" to come before selector ".menu li:first-child"       no-descending-specificity
   71:1  ×  Unexpected duplicate selector "nav", first used at line 35                          no-duplicate-selectors   

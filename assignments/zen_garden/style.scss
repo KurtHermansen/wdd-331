@@ -1,0 +1,97 @@
+@import 'partials/reset';
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+@import 'partials/colors';
+@import 'partials/typography';
+@import 'partials/navigation';
+@import 'partials/buttons';
+@import 'partials/background';
+@import 'partials/patterns';
+@import 'partials/icons';
+@import 'partials/form';
+
+@import 'partials/basic-style';
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    max-width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    animation: gradient-animated 4s alternate linear infinite;
+}
+footer a {
+    align-items: center;
+}
+
+@keyframes gradient-animated {
+    0%   {border: 5px solid $color-1;box-shadow:-10px -10px 20px $color-4, 10px 10px 20px $color-4; opacity: .5;}
+    50%  {border: 5px solid $color-3;box-shadow:-10px -10px 20px $color-1, 10px 10px 20px $color-1}
+    100% {border: 5px solid $color-4;box-shadow:-10px -10px 20px $color-3, 10px 10px 20px $color-3}
+    
+}
+
+.zen-validate-html::before {
+    @include footer-icon('https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png')
+}
+
+.zen-validate-css::after {
+    @include footer-icon('https://www.pngkey.com/png/full/141-1415612_css-css3-logo-black-and-white.png')
+}
+
+.zen-license::after {
+    @include footer-icon('https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png')
+}
+
+.zen-accessibility::after {
+    @include footer-icon('https://www.jimpeplinski.ca/wp-content/uploads/2017/02/Accessibility_Icon_final.gif')
+}
+
+.zen-github::after {
+    @include footer-icon('https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/142_Github-512.png')
+}
+.intro {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    height: 100%;
+}
+header {
+    flex: 0 0 100%;
+}
+
+@include MQ(M) {
+    .summary, .preamble {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .design-selection h3 {
+        font-size: 2rem;
+    }
+    .design-selection ul {
+        display: grid;
+        margin: 2rem;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .design-selection {
+        grid-column: 1 / span 2;
+    }
+    .zen-resources {
+        grid-column-start: 2;
+    }
+    .design-selection li {
+        text-align: center;
+        display: grid;
+        height: 15vh;
+        animation: gradient-animated 4s alternate linear infinite;
+    }
+    .design-selection a, .design-selection #text {
+        width: 100%;
+        height: 100%;
+    }
+}

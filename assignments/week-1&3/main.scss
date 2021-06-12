@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+//Breakpoints
+$break-medium: 25em;
+$break-large: 60em;
+
+//colors
+$header-color: #6495ed;
+$main-color: #faebd7;
+$article-color: white;
+$header-text: white;
+$main-text: black;
+$post-color: grey;
+
+//mixins
+@mixin breakpoint($break) {
+    @if $break == large {
+        @media (min-width: $break-large) {@content; }
+    }
+    @else if $break == medium {
+        @media (min-width: $break-medium) {@content; }
+    }
+    @else {
+        @media ($break) {@content; }
+    }
+    
+}
+
+@mixin article($width, $padding, $margin) {
+    width: $width;
+    padding: $padding;
+    margin: $margin;
+    box-shadow: 4px 4px 5px black;
+}
+@mixin fig-img($img-width, $max-width) {
+    width: $img-width;
+    max-width: $max-width;
+}
+
+p,a {
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+h1 a,h2 a {
+    font-family: 'Lora';
+    text-decoration: none;
+}
+nav ul {
+    list-style-type: none;
+}
+ul li {
+    padding: .5rem 0;
+}
+ul li a {
+    color: $header-text;
+    text-decoration: none;
+}
+h1 a {
+    color: $header-text;
+}
+header {
+    padding: 2rem;
+    background-color: $header-color;
+    text-align: right;
+}
+main {
+    background-color: $main-color;
+    padding: 1rem;
+}
+figure {
+    text-align: center;
+}
+article {
+    background-color: $article-color;
+    @include breakpoint(medium) { @include article(90%, 1.5rem, 2rem auto )}
+    @include breakpoint(large) { @include article(70%, 2rem, 2rem auto )}
+    figure img {
+        @include breakpoint(medium) { @include fig-img(100%, 300px) }
+        @include breakpoint(large) { @include fig-img(auto, 300px) }
+    }
+
+}
+
+body div {
+    @include breakpoint(large) {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+}

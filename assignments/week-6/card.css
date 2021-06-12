@@ -1,0 +1,36 @@
+/*$color-one: #931621;
+$color-two: #124559;
+$background: #f3f3f4;*/
+
+.card {
+    width: 357px;
+    height: 499.8px;
+    padding: 2px;
+    margin: 15px auto;
+    box-shadow: 5px 5px 5px grey;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+
+  }
+  svg {
+      width: 100%;
+      height: 100%;
+      
+  }
+.red-second-pattern, .red-first-pattern {
+    position: absolute;
+}
+.rect-pattern {
+    fill: #931621;
+    stroke: black;
+}
+ellipse:nth {
+    fill: none;
+    stroke: #f3f3f3;
+    align-items: center;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

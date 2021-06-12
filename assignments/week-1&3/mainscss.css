@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+p, a {
+  font-family: "Arial", Helvetica, sans-serif;
+}
+
+h1 a, h2 a {
+  font-family: "Lora";
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding: 0.5rem 0;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 a {
+  color: white;
+}
+
+header {
+  padding: 2rem;
+  background-color: #6495ed;
+  text-align: right;
+}
+
+main {
+  background-color: #faebd7;
+  padding: 1rem;
+}
+
+figure {
+  text-align: center;
+}
+
+article {
+  background-color: white;
+}
+@media (min-width: 25em) {
+  article {
+    width: 90%;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    box-shadow: 4px 4px 5px black;
+  }
+}
+@media (min-width: 60em) {
+  article {
+    width: 70%;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 5px 5px 5px black;
+  }
+}
+@media (min-width: 25em) {
+  article figure img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+@media (min-width: 60em) {
+  article figure img {
+    width: auto;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 60em) {
+  body div {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+}
+
+/*# sourceMappingURL=mainscss.css.map */

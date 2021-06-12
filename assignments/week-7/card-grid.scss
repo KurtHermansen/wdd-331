@@ -1,0 +1,115 @@
+//variables to setup basic size and shape of the card and pips
+$card-width: 40vw;
+$card-height: $card-width*1.4;
+$font-size-number: $card-width * 0.1;
+$icon-size: $card-width / 5;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin col-place-span($place-col, $span) {
+    grid-column: ($place-col), span($span);
+}
+@mixin row-place-span($place-row, $span) {
+    grid-row: ($place-row), span($span);
+}
+
+//styles to draw a basic outline of a card
+.card {
+    border: 1px solid grey;
+    height: $card-height;
+    width: $card-width;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 2px 2px 4px grey;
+}
+
+//because it is a card front we want a bit of extra padding
+.card-front {
+    padding: .5em;
+}
+
+
+
+
+//set icon size
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
+
+.number {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 1 / span 1;
+    align-self: center;
+    text-align: center;
+    font-size: $font-size-number;
+   
+  //an icon that is part of a number should be half the normal size
+    & > .icon {
+        width: $icon-size * .5;
+        height: $icon-size *.5;
+    }
+}
+
+//rotate bottom pips 180deg
+.rotate {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-self: center;
+    width: 100%;
+    grid-column: 5;
+    grid-row: 4;
+    transform: rotate(180deg);
+}
+.row {
+  display: grid;
+  height: 100%;
+  align-self: center;
+  grid-template-colunms: 12.5% 25% 25% 25% 12.5%;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.cell {
+    width: 100%;
+}
+
+.ic-1 {
+    align-self: center;
+    grid-column: 2 ;
+}
+.ic-2 {
+    align-self: center;
+    grid-column: 4;
+}
+.ic-3 {
+    align-self: center;
+    grid-column: 3;
+    grid-row: 2;
+}
+.ic-4 {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 3;
+}
+.ic-5 {
+    align-self: center;
+    grid-column: 4;
+    grid-row: 3;
+}
+.ic-6 {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 4;
+}
+.ic-7 {
+    align-self: center;
+    grid-column: 4;
+    grid-row: 4;
+}

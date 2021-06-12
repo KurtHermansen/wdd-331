@@ -1,0 +1,19 @@
+$color-one: #931621;
+$color-two: #124559;
+$background: #f3f3f4;
+
+@mixin card($width, $height, $padding, $margin) {
+    width: $width;
+    height: $width * 1.4;
+    padding: $padding;
+    margin: $margin;
+    box-shadow: 5px 5px 5px grey;
+    border: 1px solid black;
+    border-radius: 10px;
+    display:flex;
+}
+
+.card{
+    @include card(357px, 500px, 2px, 15px)
+}
+
