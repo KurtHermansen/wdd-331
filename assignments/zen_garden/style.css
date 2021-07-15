@@ -672,7 +672,7 @@ footer {
   .preamble::after, .archives::before, .resources::before {
     display: block;
     content: url("./path.svg");
-    animation: pulse 4s alternate infinite;
+    animation: pulse 4s linear infinite;
   }
 
   .resources::before {
@@ -680,7 +680,7 @@ footer {
   }
 
   .preamble::after {
-    animation: wave 4s alternate infinite;
+    animation: wave 4s linear infinite;
   }
 
   @keyframes wave {
@@ -698,7 +698,7 @@ footer {
       filter: drop-shadow(0px 0px 10px #fffaff);
     }
     75% {
-      transform: rotateY(90eg);
+      transform: rotateY(90deg);
       filter: drop-shadow(0px 0px 10px #00d9c0);
     }
     100% {
