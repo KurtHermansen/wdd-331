@@ -555,7 +555,6 @@ footer {
     animation: wave 3s alternate infinite; }
 
   path {
-    stroke: pink;
     animation: wave 3s infinite; }
 
   @keyframes wave {
@@ -564,8 +563,7 @@ footer {
     25% {
       transform: rotateY(20deg); }
     50% {
-      transform: rotateY(0deg);
-      stroke: blue !important; }
+      transform: rotateY(0deg); }
     75% {
       transform: rotateY(20deg); }
     100% {
