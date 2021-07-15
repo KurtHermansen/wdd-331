@@ -544,10 +544,15 @@ footer {
     width: 100%;
     height: 100%; }
 
-  .preamble::after {
+  .preamble::after, .archives::before, .resources::before {
     display: block;
-    content: url("./path.svg");
-    color: pink; }
+    content: url("./path.svg"); }
+
+  .resources::before {
+    transform: rotateY(180deg); }
+
+  .preamble::after {
+    animation: wave 3s alternate infinite; }
 
   path {
     stroke: pink;
@@ -555,14 +560,15 @@ footer {
 
   @keyframes wave {
     0% {
-      stroke: pink; }
+      transform: rotateY(180deg); }
     25% {
-      stroke: red; }
+      transform: rotateY(20deg); }
     50% {
-      stroke: blue; }
+      transform: rotateY(0deg);
+      stroke: blue !important; }
     75% {
-      stroke: green; }
+      transform: rotateY(20deg); }
     100% {
-      stroke: pink; } } }
+      transform: rotateY(180deg); } } }
 
 /*# sourceMappingURL=style.css.map */
