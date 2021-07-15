@@ -82,7 +82,7 @@
   .preamble::after, .archives::before, .resources::before {
     display: block;
     content: url('./path.svg');
-    animation: pulse 4s alternate infinite;
+    animation: pulse 4s linear infinite;
 
   }
 
@@ -92,7 +92,7 @@
   }
 
   .preamble::after {
-    animation: wave 4s alternate infinite;
+    animation: wave 4s linear infinite;
   }
 
 
