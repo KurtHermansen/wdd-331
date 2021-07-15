@@ -58,7 +58,6 @@ table {
   0% {
     border: 5px solid #662c91;
     box-shadow: -10px -10px 20px #00d9c0, 10px 10px 20px #00d9c0;
-    opacity: 0.5;
   }
   50% {
     border: 5px solid #ff4365;
@@ -73,7 +72,6 @@ table {
   0% {
     border: 2px solid #662c91;
     box-shadow: -5px -5px 20px #00d9c0, 5px 5px 20px #00d9c0;
-    opacity: 0.5;
   }
   50% {
     border: 2px solid #ff4365;
@@ -82,6 +80,14 @@ table {
   100% {
     border: 2px solid #00d9c0;
     box-shadow: -5px -5px 20px #ff4365, 5px 5px 20px #ff4365;
+  }
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff4365, 0 0 20px #ff4365, 0 0 25px #ff4365, 0 0 30px #ff4365, 0 0 35px #ff4365;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #00d9c0, 0 0 20px #00d9c0, 0 0 25px #00d9c0, 0 0 30px #00d9c0, 0 0 35px #00d9c0, 0 0 40px #00d9c0;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -528,6 +534,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #fffaff;
 }
 
 img {
@@ -546,6 +553,9 @@ header > h1, header > h2 {
   margin: 0;
   text-align: center;
   font-weight: bold;
+  color: #662c91;
+  text-align: center;
+  animation: glow 4s ease-in-out infinite alternate;
 }
 
 #zen-preamble {
@@ -583,8 +593,9 @@ footer {
   margin: 0 1rem;
   padding: 1rem;
   border: 1px solid #662c91;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   grid-gap: 1rem;
   text-align: center;
   animation: gradient-animated-thin 4s alternate linear infinite;
@@ -593,44 +604,10 @@ footer {
 @media only screen and (min-width: 1024px) {
   footer {
     font-size: 1.2rem;
+    width: 100%;
+    margin: 0;
   }
 
-  /*footer {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      align-content: space-between;
-      justify-content: space-between;
-      max-width: 90%;
-      margin-left: 5%;
-      text-align: center;
-      animation: gradient-animated 4s alternate linear infinite;
-  }
-
-  footer a {
-      display: flex;
-      color: rgba(255, 255, 255, 0.0)
-  }
-  .zen-validate-html::before {
-      @include footer-icon('https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.png')
-  }
-
-  .zen-validate-css::after {
-      @include footer-icon('https://www.pngkey.com/png/full/141-1415612_css-css3-logo-black-and-white.png')
-  }
-
-  .zen-license::after {
-      @include footer-icon('https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png')
-  }
-
-  .zen-accessibility::after {
-      @include footer-icon('https://www.jimpeplinski.ca/wp-content/uploads/2017/02/Accessibility_Icon_final.gif')
-  }
-
-  .zen-github::after {
-      @include footer-icon('https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/142_Github-512.png')
-  }
-  */
   .intro {
     display: flex;
     flex-flow: row wrap;
@@ -671,7 +648,18 @@ footer {
     text-align: center;
     display: grid;
     height: 15vh;
+    background-color: #001011;
     animation: gradient-animated-thin 4s alternate linear infinite;
+    transition: z-index, background-color, color, transform 1s;
+  }
+
+  .design-selection li:hover {
+    z-index: 99;
+    transform: scale(1.3);
+    background-color: #fffaff;
+  }
+  .design-selection li:hover a {
+    color: #ff4365;
   }
 
   .design-selection a, .design-selection #text {
