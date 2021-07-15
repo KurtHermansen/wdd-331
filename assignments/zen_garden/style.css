@@ -666,6 +666,19 @@ footer {
     width: 100%;
     height: 100%;
   }
+
+  .preamble::after {
+    display: block;
+    content: url("./path.svg");
+    height: 200px;
+    width: 200px;
+  }
+
+  path {
+    stroke: #ff4365;
+    height: 200px;
+    width: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
