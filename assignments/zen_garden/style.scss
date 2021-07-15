@@ -99,28 +99,28 @@
   @keyframes wave {
     0% {
       transform: rotateY(0deg);
-      filter: drop-shadow(0px 0px 10px $color-3);`
+      filter: drop-shadow(0px 0px 10px $color-3);
     }
 
     25% {
       transform: rotateY(90deg);
-      filter: drop-shadow(0px 0px 10px $color-4);`
+      filter: drop-shadow(0px 0px 10px $color-4);
     }
 
     50% {
       transform: rotateY(180deg);
       stroke: blue !important;
-      filter: drop-shadow(0px 0px 10px $color-5);`
+      filter: drop-shadow(0px 0px 10px $color-5);
     }
 
     75% {
       transform: rotateY(90eg);
-      filter: drop-shadow(0px 0px 10px $color-4);`
+      filter: drop-shadow(0px 0px 10px $color-4);
     }
 
     100% {
       transform: rotateY(0deg);
-      filter: drop-shadow(0px 0px 10px $color-3);`
+      filter: drop-shadow(0px 0px 10px $color-3);
     }
   }
   @keyframes pulse {
